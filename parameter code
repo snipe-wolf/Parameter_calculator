@@ -1,0 +1,356 @@
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+import javax.swing.event.*;
+import java.text.*;
+
+public class gui extends JPanel {
+    private JTextField d_anion;
+    private JTextField d_cation;
+    private JTextField d_neutral;
+    private JTextField d_cation_2;
+    private JTextField d_neutral_2;
+    private JTextField d_ip;
+    private JTextField d_ea;
+    private JTextField d_hard;
+    private JTextField d_pot;
+    private JTextField d_reorg;
+    private JTextField a_anion;
+    private JTextField a_cation;
+    private JTextField a_neutral;
+    private JTextField a_anion_2;
+    private JTextField a_neutral_2;
+    private JTextField a_ip;
+    private JTextField a_ea;
+    private JTextField a_hard;
+    private JTextField a_pot;
+    private JTextField a_reorg;
+    private JTextField f_reorg;
+    private JTextField f_charge_transfer;
+    private JTextField f_stab_energy;
+    private JTextField f_reorg_plus_energy;
+    private JButton f_para;
+    private JButton a_para;
+    private JButton d_para;
+    private JLabel jcomp28;
+    private JLabel jcomp29;
+    private JLabel jcomp30;
+    private JLabel jcomp31;
+    private JLabel jcomp32;
+    private JLabel jcomp33;
+    private JLabel jcomp34;
+    private JLabel jcomp35;
+    private JLabel jcomp36;
+    private JLabel jcomp37;
+    private JLabel jcomp38;
+    private JLabel jcomp39;
+    private JLabel jcomp40;
+    private JLabel jcomp41;
+    private JLabel jcomp42;
+    private JLabel jcomp43;
+    private JLabel jcomp44;
+    private JLabel jcomp45;
+    private JLabel jcomp46;
+    private JLabel jcomp47;
+    private JLabel jcomp48;
+    private JLabel jcomp49;
+    private JLabel jcomp50;
+    private JLabel jcomp51;
+    private JLabel jcomp52;
+    private JLabel jcomp53;
+    private JLabel jcomp54;
+    private JLabel jcomp55;
+    private JLabel jcomp56;
+    private JLabel jcomp57;
+    private JLabel jcomp58;
+    private JLabel jcomp59;
+    private JLabel jcomp60;
+    private JLabel jcomp61;
+
+    public gui() {
+        //construct components
+        d_anion = new JTextField (12);
+        d_cation = new JTextField (12);
+        d_neutral = new JTextField (15);
+        d_cation_2 = new JTextField (15);
+        d_neutral_2 = new JTextField (15);
+        d_ip = new JTextField (15);
+        d_ea = new JTextField (15);
+        d_hard = new JTextField (15);
+        d_pot = new JTextField (15);
+        d_reorg = new JTextField (15);
+        a_anion = new JTextField (15);
+        a_cation = new JTextField (15);
+        a_neutral = new JTextField (15);
+        a_anion_2 = new JTextField (15);
+        a_neutral_2 = new JTextField (15);
+        a_ip = new JTextField (15);
+        a_ea = new JTextField (15);
+        a_hard = new JTextField (15);
+        a_pot = new JTextField (15);
+        a_reorg = new JTextField (15);
+        f_reorg = new JTextField (15);
+        f_charge_transfer = new JTextField (15);
+        f_stab_energy = new JTextField (15);
+        f_reorg_plus_energy = new JTextField (15);
+        f_para = new JButton ("Calculate");
+        a_para = new JButton ("Get acceptor parameter");
+        d_para = new JButton ("Get doner parameter");
+        jcomp28 = new JLabel ("Anion energy(Ha)");
+        jcomp29 = new JLabel ("Reorganization energy");
+        jcomp30 = new JLabel ("λ (kcal/mol)");
+        jcomp31 = new JLabel ("Charge transfer");
+        jcomp32 = new JLabel ("Stablization energy");
+        jcomp33 = new JLabel ("IP (kcal/mol)");
+        jcomp34 = new JLabel ("EA (kcal/mol)");
+        jcomp35 = new JLabel ("Chem. Hardness(Ha)");
+        jcomp36 = new JLabel ("Chm. Potential(Ha)");
+        jcomp37 = new JLabel ("Reorganization");
+        jcomp38 = new JLabel ("energy (kcal/mol)");
+        jcomp39 = new JLabel ("Anion energy(Ha)");
+        jcomp40 = new JLabel ("Cation energy(Ha)");
+        jcomp41 = new JLabel ("Neutral energy(Ha)");
+        jcomp42 = new JLabel ("Anion(2) energy(Ha)");
+        jcomp43 = new JLabel ("Neutral(2) energy(Ha)");
+        jcomp44 = new JLabel ("IP (kcal/mol)");
+        jcomp45 = new JLabel ("EA (kcal/mol)");
+        jcomp46 = new JLabel ("Chem. Hardness(Ha)");
+        jcomp47 = new JLabel ("Chm. Potential(Ha)");
+        jcomp48 = new JLabel ("Reorganization");
+        jcomp49 = new JLabel ("energy (kcal/mol)");
+        jcomp50 = new JLabel ("Cation energy(Ha)");
+        jcomp51 = new JLabel ("Neutral energy(Ha)");
+        jcomp52 = new JLabel ("Cation(2) energy(Ha)");
+        jcomp53 = new JLabel ("Neutral(2) energy(Ha)");
+        jcomp54 = new JLabel ("DONER ENERGY INPUT");
+        jcomp55 = new JLabel ("DONER PARAMETERS");
+        jcomp56 = new JLabel ("ACCEPTOR ENERGY INPUT");
+        jcomp57 = new JLabel ("ACCEPTOR PARAMETERS");
+        jcomp58 = new JLabel ("FINAL PARAMETERS");
+        jcomp59 = new JLabel ("ΔE (kcal/mol)");
+        jcomp60 = new JLabel ("λ + ΔE (kcal/mol)");
+        jcomp61 = new JLabel ("ΔN");
+
+        //adjust size and set layout
+        setPreferredSize (new Dimension (1232, 274));
+        setLayout (null);
+
+        //add components
+        add (d_anion);
+        add (d_cation);
+        add (d_neutral);
+        add (d_cation_2);
+        add (d_neutral_2);
+        add (d_ip);
+        add (d_ea);
+        add (d_hard);
+        add (d_pot);
+        add (d_reorg);
+        add (a_anion);
+        add (a_cation);
+        add (a_neutral);
+        add (a_anion_2);
+        add (a_neutral_2);
+        add (a_ip);
+        add (a_ea);
+        add (a_hard);
+        add (a_pot);
+        add (a_reorg);
+        add (f_reorg);
+        add (f_charge_transfer);
+        add (f_stab_energy);
+        add (f_reorg_plus_energy);
+        add (f_para);
+        add (a_para);
+        add (d_para);
+        add (jcomp28);
+        add (jcomp29);
+        add (jcomp30);
+        add (jcomp31);
+        add (jcomp32);
+        add (jcomp33);
+        add (jcomp34);
+        add (jcomp35);
+        add (jcomp36);
+        add (jcomp37);
+        add (jcomp38);
+        add (jcomp39);
+        add (jcomp40);
+        add (jcomp41);
+        add (jcomp42);
+        add (jcomp43);
+        add (jcomp44);
+        add (jcomp45);
+        add (jcomp46);
+        add (jcomp47);
+        add (jcomp48);
+        add (jcomp49);
+        add (jcomp50);
+        add (jcomp51);
+        add (jcomp52);
+        add (jcomp53);
+        add (jcomp54);
+        add (jcomp55);
+        add (jcomp56);
+        add (jcomp57);
+        add (jcomp58);
+        add (jcomp59);
+        add (jcomp60);
+        add (jcomp61);
+
+        //set component bounds (only needed by Absolute Positioning)
+        d_anion.setBounds (145, 65, 100, 25);
+        d_cation.setBounds (145, 95, 100, 25);
+        d_neutral.setBounds (145, 125, 100, 25);
+        d_cation_2.setBounds (145, 155, 100, 25);
+        d_neutral_2.setBounds (145, 185, 100, 25);
+        d_ip.setBounds (380, 65, 100, 25);
+        d_ea.setBounds (380, 95, 100, 25);
+        d_hard.setBounds (380, 125, 100, 25);
+        d_pot.setBounds (380, 155, 100, 25);
+        d_reorg.setBounds (380, 185, 100, 25);
+        a_anion.setBounds (630, 65, 100, 25);
+        a_cation.setBounds (630, 95, 100, 25);
+        a_neutral.setBounds (630, 125, 100, 25);
+        a_anion_2.setBounds (630, 155, 100, 25);
+        a_neutral_2.setBounds (630, 185, 100, 25);
+        a_ip.setBounds (870, 65, 100, 25);
+        a_ea.setBounds (870, 95, 100, 25);
+        a_hard.setBounds (870, 125, 100, 25);
+        a_pot.setBounds (870, 155, 100, 25);
+        a_reorg.setBounds (870, 185, 100, 25);
+        f_reorg.setBounds (1120, 90, 100, 25);
+        f_charge_transfer.setBounds (1120, 135, 100, 25);
+        f_stab_energy.setBounds (1120, 175, 100, 25);
+        f_reorg_plus_energy.setBounds (1120, 215, 100, 25);
+        f_para.setBounds (1065, 50, 100, 25);
+        a_para.setBounds (525, 235, 175, 25);
+        d_para.setBounds (50, 240, 160, 25);
+        jcomp28.setBounds (30, 65, 100, 25);
+        jcomp29.setBounds (990, 85, 135, 25);
+        jcomp30.setBounds (1015, 100, 100, 25);
+        jcomp31.setBounds (1005, 130, 100, 25);
+        jcomp32.setBounds (995, 170, 110, 25);
+        jcomp33.setBounds (765, 65, 100, 25);
+        jcomp34.setBounds (765, 95, 100, 25);
+        jcomp35.setBounds (745, 125, 120, 25);
+        jcomp36.setBounds (750, 155, 110, 25);
+        jcomp37.setBounds (760, 185, 100, 25);
+        jcomp38.setBounds (755, 205, 100, 25);
+        jcomp39.setBounds (510, 65, 100, 25);
+        jcomp40.setBounds (510, 95, 105, 25);
+        jcomp41.setBounds (510, 125, 110, 25);
+        jcomp42.setBounds (505, 155, 115, 25);
+        jcomp43.setBounds (500, 185, 125, 25);
+        jcomp44.setBounds (270, 65, 100, 25);
+        jcomp45.setBounds (270, 95, 100, 25);
+        jcomp46.setBounds (260, 125, 130, 25);
+        jcomp47.setBounds (265, 155, 115, 25);
+        jcomp48.setBounds (270, 180, 90, 25);
+        jcomp49.setBounds (265, 200, 100, 25);
+        jcomp50.setBounds (30, 95, 105, 25);
+        jcomp51.setBounds (30, 125, 110, 25);
+        jcomp52.setBounds (20, 155, 125, 25);
+        jcomp53.setBounds (20, 185, 125, 25);
+        jcomp54.setBounds (60, 15, 150, 40);
+        jcomp55.setBounds (305, 20, 140, 30);
+        jcomp56.setBounds (540, 15, 165, 35);
+        jcomp57.setBounds (770, 15, 160, 35);
+        jcomp58.setBounds (1050, 20, 135, 25);
+        jcomp59.setBounds (1010, 185, 100, 25);
+        jcomp60.setBounds (1005, 215, 100, 25);
+        jcomp61.setBounds (1035, 145, 20, 25);
+        
+        DecimalFormat numFormat = new DecimalFormat("#.0000");
+        
+        d_para.addActionListener( new ActionListener() {
+        	@Override
+        	public void actionPerformed(ActionEvent evt)
+        	{
+        		Double d_ip_data = Double.parseDouble(d_anion.getText()) - Double.parseDouble(d_neutral.getText());
+        		//converting into kcal/mol
+        		d_ip_data *= 627.51;
+        		d_ip.setText(numFormat.format(d_ip_data) + "");
+        		
+        		Double d_ea_data = Double.parseDouble(d_neutral.getText()) - Double.parseDouble(d_cation.getText());
+        		d_ea_data *= 627.51;
+        		d_ea.setText(numFormat.format(d_ea_data) + "");
+        		
+        		Double d_hard_data = -1*(d_ip_data + d_ea_data)/2;
+        		d_hard.setText(numFormat.format(d_hard_data) + "");
+        		
+        		Double d_pot_data = (d_ip_data - d_ea_data)/2;
+        		d_pot.setText(numFormat.format(d_pot_data) + "");
+        		
+        		Double d_reorg_data = -1*(Double.parseDouble(d_neutral.getText())) + Double.parseDouble(d_cation.getText())
+        							-1*(Double.parseDouble(d_cation_2.getText())) + Double.parseDouble(d_neutral_2.getText());
+        		
+        		d_reorg_data *= 627.51;
+        		d_reorg.setText(numFormat.format(d_reorg_data) + "");
+        		
+        		
+        	}
+        }); 
+        
+        a_para.addActionListener( new ActionListener() {
+        	@Override
+        	public void actionPerformed(ActionEvent evt)
+        	{
+        		Double a_ip_data = Double.parseDouble(a_anion.getText()) - Double.parseDouble(a_neutral.getText());
+        		//converting into kcal/mol
+        		a_ip_data *= 627.51;
+        		a_ip.setText(numFormat.format(a_ip_data) + "");
+        		
+        		Double a_ea_data = Double.parseDouble(a_neutral.getText()) - Double.parseDouble(a_cation.getText());
+        		a_ea_data *= 627.51;
+        		a_ea.setText(numFormat.format(a_ea_data) + "");
+        		
+        		Double a_hard_data = -1*(a_ip_data + a_ea_data)/2;
+        		a_hard.setText(numFormat.format(a_hard_data) + "");
+        		
+        		Double a_pot_data = (a_ip_data - a_ea_data)/2;
+        		a_pot.setText(numFormat.format(a_pot_data) + "");
+        		
+        		Double a_reorg_data = -1*(Double.parseDouble(a_neutral.getText())) + Double.parseDouble(a_anion.getText())
+        							-1*(Double.parseDouble(a_anion_2.getText())) + Double.parseDouble(a_neutral_2.getText());
+        		
+        		a_reorg_data *= 627.51;
+        		a_reorg.setText(numFormat.format(a_reorg_data) + "");
+        		
+        		
+        	}
+        });
+        
+        f_para.addActionListener(new ActionListener() {
+        	@Override
+        	public void actionPerformed(ActionEvent evt) {
+        		Double f_reorg_data = Double.parseDouble(a_reorg.getText()) + Double.parseDouble(d_reorg.getText());
+        		f_reorg.setText(numFormat.format(f_reorg_data) + "");
+        		
+        		Double f_charge_transfer_data = (Double.parseDouble(d_hard.getText()) - Double.parseDouble(a_hard.getText()))
+        										/(Double.parseDouble(a_pot.getText()) + Double.parseDouble(d_pot.getText()));
+           		f_charge_transfer.setText(numFormat.format(f_charge_transfer_data) + "");
+        		
+        		
+        		double f_stab_energy_data = -1*f_charge_transfer_data*(Double.parseDouble(d_hard.getText()) - Double.parseDouble(a_hard.getText()))*0.5;
+        		f_stab_energy.setText(numFormat.format(f_stab_energy_data) + "");
+        		
+        		
+        		Double f_reorg_plus_energy_data = f_stab_energy_data + f_reorg_data;
+        		f_reorg_plus_energy.setText(numFormat.format(f_reorg_plus_energy_data) + "");
+        		
+        	}
+        });
+        
+        
+    }
+
+
+    public static void main (String[] args) {
+        JFrame frame = new JFrame ("Parameter Calculator");
+        frame.setDefaultCloseOperation (JFrame.EXIT_ON_CLOSE);
+        frame.getContentPane().add (new gui());
+        frame.pack();
+        frame.setVisible (true);
+    }
+}
